@@ -1,0 +1,81 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-CA": {
+          "summary": "A skill that makes it easier to follow recipes while cooking.",
+          "examplePhrases": [
+            "Alexa open my recipes",
+            "give me a summary of my recipe",
+            "help"
+          ],
+          "keywords": [
+            "recipe",
+            "cooking",
+            "cookbook"
+          ],
+          "name": "My Recipes",
+          "description": "A skill that makes it easier to follow recipes while cooking.",
+          "smallIconUri": "file://assets/images/en-CA_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-CA_largeIconUri.png"
+        },
+        "en-US": {
+          "name": "My Recipes"
+        },
+        "en-GB": {
+          "summary": "A skill that makes it easier to follow recipes while cooking.",
+          "examplePhrases": [
+            "Alexa open my recipes",
+            "give me a summary of my recipe",
+            "help"
+          ],
+          "keywords": [
+            "recipe",
+            "cooking",
+            "cookbook"
+          ],
+          "name": "My Recipes",
+          "description": "A skill that makes it easier to follow recipes while cooking.",
+          "smallIconUri": "file://assets/images/en-GB_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-GB_largeIconUri.png"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "COOKING_AND_RECIPE",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:158213537542:function:67d7540e-867c-4dc0-ad6a-bd60e2face80:Release_0"
+        },
+        "interfaces": [],
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:158213537542:function:67d7540e-867c-4dc0-ad6a-bd60e2face80:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:158213537542:function:67d7540e-867c-4dc0-ad6a-bd60e2face80:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:158213537542:function:67d7540e-867c-4dc0-ad6a-bd60e2face80:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "locales": {
+        "en-CA": {},
+        "en-GB": {}
+      }
+    }
+  }
+}

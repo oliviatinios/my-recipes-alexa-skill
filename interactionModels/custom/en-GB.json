@@ -1,0 +1,118 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "my recipes",
+      "intents": [
+        {
+          "name": "GetRecipeByName",
+          "slots": [
+            {
+              "name": "Title",
+              "type": "RecipeTypes"
+            }
+          ],
+          "samples": [
+            "Give me a summary of my {Title} recipe"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "pizza"
+              }
+            },
+            {
+              "name": {
+                "value": "burrito"
+              }
+            },
+            {
+              "name": {
+                "value": "moroccan couscous"
+              }
+            },
+            {
+              "name": {
+                "value": "lahanorizo"
+              }
+            },
+            {
+              "name": {
+                "value": "buddha bowl"
+              }
+            },
+            {
+              "name": {
+                "value": "pesto pasta"
+              }
+            },
+            {
+              "name": {
+                "value": "burrito bowl"
+              }
+            },
+            {
+              "name": {
+                "value": "grilled cheese"
+              }
+            }
+          ],
+          "name": "RecipeTypes"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "GetRecipeByName",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Title",
+              "type": "RecipeTypes",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Intent-GetRecipeByName.IntentSlot-Title"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        }
+      ],
+      "delegationStrategy": "SKILL_RESPONSE"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Intent-GetRecipeByName.IntentSlot-Title",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is your recipe called?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "6"
+}

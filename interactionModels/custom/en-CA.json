@@ -1,0 +1,206 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "my recipes",
+      "intents": [
+        {
+          "name": "GetRecipeByName",
+          "slots": [
+            {
+              "name": "Title",
+              "type": "RecipeTypes"
+            }
+          ],
+          "samples": [
+            "Give me a summary of my {Title} recipe"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "StartRecipe",
+          "slots": [
+            {
+              "name": "Title",
+              "type": "RecipeTypes"
+            }
+          ],
+          "samples": [
+            "Start recipe",
+            "Start making {Title}",
+            "Start cooking {Title}",
+            "Get my {Title} recipe",
+            "Start my {Title} recipe"
+          ]
+        },
+        {
+          "name": "GetFirstStep",
+          "slots": [],
+          "samples": [
+            "Go to first ",
+            "Start first step",
+            "Get me the first step",
+            "What is the first step"
+          ]
+        },
+        {
+          "name": "GetNextStep",
+          "slots": [],
+          "samples": [
+            "Tell me the next step",
+            "Get next step",
+            "What is the next step"
+          ]
+        },
+        {
+          "name": "GetPreviousStep",
+          "slots": [],
+          "samples": [
+            "What was the previous step",
+            "Get the last step",
+            "Go to previous step",
+            "Get the previous step",
+            "Tell me the previous step",
+            "Go to last step",
+            "What was the last step"
+          ]
+        },
+        {
+          "name": "GetIngredients",
+          "slots": [],
+          "samples": [
+            "Get ingredients",
+            "Tell me the ingredients",
+            "What are the ingredients"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "lahanorizo"
+              }
+            },
+            {
+              "name": {
+                "value": "buddha bowl"
+              }
+            },
+            {
+              "name": {
+                "value": "pizza"
+              }
+            },
+            {
+              "name": {
+                "value": "burrito"
+              }
+            },
+            {
+              "name": {
+                "value": "moroccan couscous"
+              }
+            },
+            {
+              "name": {
+                "value": "Pesto pasta"
+              }
+            },
+            {
+              "name": {
+                "value": "Burrito bowl"
+              }
+            },
+            {
+              "name": {
+                "value": "Grilled cheese"
+              }
+            }
+          ],
+          "name": "RecipeTypes"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "GetRecipeByName",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Title",
+              "type": "RecipeTypes",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Intent-GetRecipeByName.IntentSlot-Title"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        },
+        {
+          "name": "StartRecipe",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Title",
+              "type": "RecipeTypes",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.196463393526.224906100334"
+              }
+            }
+          ]
+        },
+        {
+          "name": "GetFirstStep",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": []
+        }
+      ],
+      "delegationStrategy": "SKILL_RESPONSE"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Intent-GetRecipeByName.IntentSlot-Title",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is your recipe called?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.196463393526.224906100334",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is your recipe called"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "8"
+}
